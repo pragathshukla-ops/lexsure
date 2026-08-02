@@ -466,8 +466,13 @@ textarea{resize:vertical;min-height:76px}
 .footer-links a:hover{color:var(--gold)}
 
 /* ── REVEAL ANIMATION ────────────────────────────── */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:1;transform:none}
+@supports(selector(:focus-visible)){
+  @media(prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease}
+    .reveal.visible{opacity:1;transform:none}
+  }
+}
 
 /* ── RESPONSIVE ──────────────────────────────────── */
 @media(max-width:900px){
@@ -1166,11 +1171,15 @@ function showTab(id, btn) {
   btn.classList.add('active');
 }
 
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+// Scroll reveal — with fallback for older browsers
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
 
 // Active nav highlight on scroll
 const sections = document.querySelectorAll('section[id], div[id="form-target"]');
