@@ -1234,6 +1234,10 @@ function selectTile(radio) {
 // ── STEP INDICATOR ──────────────────────────────────────
 function v(id){ return (document.getElementById(id)||{value:''}).value.trim(); }
 function updateSteps() {
+  const s1 = document.getElementById('s1');
+  const s2 = document.getElementById('s2');
+  const s3 = document.getElementById('s3');
+  if (!s1 || !s2) return; // steps bar not present, skip
   const b = v('buyerName') && v('buyerEmail');
   const p = document.querySelector('input[name=propType]:checked') && v('propAddress');
   document.getElementById('s1').className = 'step' + (b ? ' done':' active');
@@ -1424,7 +1428,7 @@ function notifySignup() {
     return;
   }
   msg.style.color = '#15803d';
-  msg.textContent = '✓ You're on the list! We'll notify you at ' + email + ' when the app launches.';
+  msg.textContent = '✓ You are on the list! We will notify you at ' + email + ' when the app launches.';
   document.getElementById('notifyEmail').value = '';
 }
 
