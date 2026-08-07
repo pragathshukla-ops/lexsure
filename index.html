@@ -511,12 +511,12 @@ textarea{resize:vertical;min-height:76px}
 @keyframes countUp  { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
 
 /* ── HERO ANIMATIONS ── */
-.hero-eyebrow { animation: fadeIn 0.7s 0.1s both; }
-.hero h1      { animation: fadeUp 0.8s 0.25s both; }
-.hero-desc    { animation: fadeUp 0.8s 0.4s  both; }
-.hero-desc-hi { animation: fadeUp 0.8s 0.5s  both; }
-.hero-actions { animation: fadeUp 0.8s 0.55s both; }
-.hero-pillars { animation: fadeUp 0.8s 0.7s  both; }
+.hero-eyebrow { animation: fadeIn 0.7s both; }
+.hero h1      { animation: fadeUp 0.8s both; }
+.hero-desc    { animation: fadeUp 0.8s  both; }
+.hero-desc-hi { animation: fadeUp 0.8s  both; }
+.hero-actions { animation: fadeUp 0.8s both; }
+.hero-pillars { animation: fadeUp 0.8s  both; }
 
 /* Gold underline on h1 "Your Side" */
 .hero h1 em { position:relative; display:inline-block; }
@@ -534,12 +534,12 @@ textarea{resize:vertical;min-height:76px}
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s;
   animation: scaleIn 0.5s both;
 }
-.services-grid .svc-card:nth-child(1){animation-delay:0.05s}
-.services-grid .svc-card:nth-child(2){animation-delay:0.12s}
-.services-grid .svc-card:nth-child(3){animation-delay:0.19s}
-.services-grid .svc-card:nth-child(4){animation-delay:0.26s}
-.services-grid .svc-card:nth-child(5){animation-delay:0.33s}
-.services-grid .svc-card:nth-child(6){animation-delay:0.40s}
+.services-grid 
+.services-grid 
+.services-grid 
+.services-grid 
+.services-grid 
+.services-grid 
 .svc-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 40px rgba(22,32,64,0.13);
@@ -556,10 +556,10 @@ textarea{resize:vertical;min-height:76px}
 
 /* ── STATS PILLARS ── */
 .pillar { animation: fadeUp 0.6s both; }
-.pillar:nth-child(1){animation-delay:0.75s}
-.pillar:nth-child(2){animation-delay:0.85s}
-.pillar:nth-child(3){animation-delay:0.95s}
-.pillar:nth-child(4){animation-delay:1.05s}
+
+
+
+
 .pillar-num {
   animation: goldPulse 3s ease-in-out infinite;
   display:inline-block;transition:transform 0.3s;
@@ -571,10 +571,10 @@ textarea{resize:vertical;min-height:76px}
   transition: transform 0.25s ease;
   animation: slideInL 0.6s both;
 }
-.fact-item:nth-child(1){animation-delay:0.1s}
-.fact-item:nth-child(2){animation-delay:0.2s}
-.fact-item:nth-child(3){animation-delay:0.3s}
-.fact-item:nth-child(4){animation-delay:0.4s}
+
+
+
+
 .fact-item:hover { transform: translateX(6px); }
 .fact-icon { transition: background 0.25s, transform 0.25s; }
 .fact-item:hover .fact-icon {
@@ -587,11 +587,11 @@ textarea{resize:vertical;min-height:76px}
   transition: background 0.2s, transform 0.2s;
   animation: slideInL 0.5s both;
 }
-.app-feat:nth-child(1){animation-delay:0.1s}
-.app-feat:nth-child(2){animation-delay:0.18s}
-.app-feat:nth-child(3){animation-delay:0.26s}
-.app-feat:nth-child(4){animation-delay:0.34s}
-.app-feat:nth-child(5){animation-delay:0.42s}
+
+
+
+
+
 .app-feat:hover { background:rgba(255,255,255,0.08); transform:translateX(5px); }
 
 /* ── PROCESS STEPS ── */
@@ -599,10 +599,10 @@ textarea{resize:vertical;min-height:76px}
   animation: fadeUp 0.6s both;
   transition: background 0.25s;
 }
-.proc-step:nth-child(1){animation-delay:0.1s}
-.proc-step:nth-child(2){animation-delay:0.2s}
-.proc-step:nth-child(3){animation-delay:0.3s}
-.proc-step:nth-child(4){animation-delay:0.4s}
+
+
+
+
 .proc-step:hover { background:rgba(184,146,74,0.05); }
 .proc-num { transition: color 0.3s, transform 0.3s; }
 .proc-step:hover .proc-num { color:rgba(184,146,74,0.35); transform:scale(1.08); }
@@ -612,9 +612,9 @@ textarea{resize:vertical;min-height:76px}
   animation: slideInR 0.5s both;
   position:relative; overflow:hidden;
 }
-.channel:nth-child(1){animation-delay:0.1s}
-.channel:nth-child(2){animation-delay:0.2s}
-.channel:nth-child(3){animation-delay:0.3s}
+
+
+
 .channel::before {
   content:'';position:absolute;left:0;top:0;bottom:0;
   width:3px;background:var(--gold);
@@ -652,10 +652,10 @@ textarea{resize:vertical;min-height:76px}
   animation: fadeUp 0.5s both;
   transition: box-shadow 0.25s;
 }
-.card:nth-child(1){animation-delay:0.05s}
-.card:nth-child(2){animation-delay:0.12s}
-.card:nth-child(3){animation-delay:0.19s}
-.card:nth-child(4){animation-delay:0.26s}
+
+
+
+
 .card:hover { box-shadow:0 6px 24px rgba(22,32,64,0.1); }
 
 /* ── WHY CARDS ── */
@@ -680,7 +680,7 @@ textarea{resize:vertical;min-height:76px}
 .nav-links a:hover::after { width:100%; }
 
 /* ── ABOUT QUOTE ── */
-.about-quote { animation: slideInL 0.8s 0.2s both; }
+.about-quote { animation: slideInL 0.8s both; }
 
 /* Reduce motion */
 @media(prefers-reduced-motion:reduce){
@@ -1429,42 +1429,31 @@ function notifySignup() {
 }
 
 // ── INTERSECTION OBSERVER for section-level animations ──
-const ioOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target;
-
-    // Count-up for stats pillars
-    if (el.classList.contains('pillar-num')) {
-      const text = el.dataset.target || el.textContent;
-      const hasPlus = text.includes('+');
-      const isPct  = text.includes('%');
-      const isH    = text.includes('h');
-      const num    = parseInt(text.replace(/[^0-9]/g,'')) || 0;
-      let start = 0;
-      const duration = 1400;
-      const step = (timestamp) => {
-        if (!start) start = timestamp;
-        const progress = Math.min((timestamp - start) / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
-        const current = Math.floor(ease * num);
-        el.textContent = current + (hasPlus ? '+' : isPct ? '%' : isH ? 'h' : '');
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = text; // restore original
-      };
-      el.dataset.target = text;
-      requestAnimationFrame(step);
-      io.unobserve(el);
-    }
+// Count-up for stats — runs on load
+setTimeout(() => {
+  document.querySelectorAll('.pillar-num').forEach(el => {
+    const text = el.dataset.target || el.textContent;
+    el.dataset.target = text;
+    const hasPlus = text.includes('+');
+    const isPct   = text.includes('%');
+    const isH     = text.includes('h');
+    const isColon = text.includes(':');
+    const num = parseInt(text.replace(/[^0-9]/g,'')) || 0;
+    if (num === 0) return;
+    let start = null;
+    const duration = 1600;
+    const step = (ts) => {
+      if (!start) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const cur = Math.floor(ease * num);
+      el.textContent = cur + (hasPlus ? '+' : isPct ? '%' : isH ? 'h' : isColon ? ':1' : '');
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = text;
+    };
+    requestAnimationFrame(step);
   });
-}, ioOptions);
-
-// Observe pillar numbers for count-up
-document.querySelectorAll('.pillar-num').forEach(el => {
-  el.dataset.target = el.textContent;
-  io.observe(el);
-});
+}, 800);
 
 // ── TYPING EFFECT on hero h1 ──
 // (subtle: just a cursor blink on the gold em)
@@ -1478,33 +1467,7 @@ if (heroEm) {
   }, 3200);
 }
 
-// ── STAGGER service cards on scroll ──
-const svcObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.animationPlayState = 'running';
-      svcObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.05 });
-document.querySelectorAll('.svc-card').forEach(el => {
-  el.style.animationPlayState = 'paused';
-  svcObs.observe(el);
-});
 
-// ── PROCESS STEP stagger on scroll ──
-const procObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.animationPlayState = 'running';
-      procObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.05 });
-document.querySelectorAll('.proc-step').forEach(el => {
-  el.style.animationPlayState = 'paused';
-  procObs.observe(el);
-});
 
 </script>
 </body>
